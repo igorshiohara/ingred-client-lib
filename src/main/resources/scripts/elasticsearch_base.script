@@ -1,0 +1,21 @@
+curl -XDELETE 'http://localhost:9200/ingred/'
+
+curl -XPUT 'http://localhost:9200/ingred/'
+
+curl -XPUT 'http://localhost:9200/ingred/_mapping/product' -d '{
+    "properties":{
+        "name": {
+            "type":"string"
+        },
+		"description": {
+            "type":"string"
+        },
+		"category": {
+            "type":"string"
+        },
+		"ingredients": {
+            "type":"string"
+        }
+    }
+}
+'
